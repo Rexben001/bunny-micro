@@ -4,10 +4,7 @@ const express = require('express');
 const cors = require('cors');
 const amqp = require('amqplib/callback_api');
 const messageQueueConnectionString =
-  process.env.CLOUDAMQP_URL ||
-  'amqps://djtauhtu:60paGCvyvUNGN6JiYh4FFA_MZbA34-6a@orangutan.rmq.cloudamqp.com/djtauhtu';
-
-console.log('messageQueueConnectionString>>', messageQueueConnectionString);
+  process.env.CLOUDAMQP_URL;
 
 const { connectDB } = require('./models');
 const routes = require('./routes');
